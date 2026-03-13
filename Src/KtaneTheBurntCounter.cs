@@ -7,9 +7,9 @@ namespace KtaneTheBurnt
     public sealed class KtaneTheBurntCounter : PropellerModuleBase<KtaneTheBurntCounterSettings>
     {
         public int count = 0;
-        public object lockObject = new object();
+        public object lockObject = new();
 
-        public override string Name { get { return "KTANE The Burnt Counter"; } }
+        public override string Name => "KTANE The Burnt Counter";
 
         public override HttpResponse Handle(HttpRequest req)
         {
